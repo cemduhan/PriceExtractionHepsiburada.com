@@ -1,7 +1,8 @@
 import urllib.request
 
 opener = urllib.request.FancyURLopener({})
-url = "https://www.hepsiburada.com/dell-gaming-7577-intel-core-i7-7700hq-8gb-1tb-128gb-ssd-gtx1050ti-freedos-15-6-fhd-ips-tasinabilir-bilgisayar-fb70d128f81c-p-HBV000009FDXO"
+#url = "https://www.hepsiburada.com/dell-gaming-7577-intel-core-i7-7700hq-8gb-1tb-128gb-ssd-gtx1050ti-freedos-15-6-fhd-ips-tasinabilir-bilgisayar-fb70d128f81c-p-HBV000009FDXO"
+url =  input("Please enter the url? ");
 f = opener.open(url)
 content = f.read()
 str1=str(content)
