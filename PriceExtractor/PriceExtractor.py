@@ -6,12 +6,12 @@ url =  input("Please enter the url? ");
 f = opener.open(url) #get the parsed page
 content = f.read() #read the page into a variable
 str1=str(content)   #convert it to str to easier search
-splitTagOne = "\"originalPriceFormatted\":\""; #after digging a little in the file
-splitTagTwo = "\",\"unitPriceFormatted";       #ı found that this is easy combination to extract the price
+splitTagOne = '"priceText":"'; #after digging a little in the file
+splitTagTwo = "TL";       #ı found that this is easy combination to extract the price
 #"originalPriceFormatted":" SOMEPRICE ","unitPriceFormatted need to find part in between
 str1=str1.split(splitTagOne)[1];#split in two and take second part
 #print(str1);
 #print(str1.__len__());
 str1=str1.split(splitTagTwo)[0]; #do the same with rest but take the first part
-print(str1);
+print(str1 + "TL");
 #print(str1.__len__());
